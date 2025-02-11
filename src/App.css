@@ -1,0 +1,111 @@
+:root {
+  --bg-color: #2a2a2a;
+  --card-color: #2a2a2a;
+  --shadow-light: rgba(255, 255, 255, 0.08);
+  --shadow-dark: rgba(0, 0, 0, 0.7);
+  --text-color: #d4d4d4;
+  --accent-color:rgb(22, 45, 22);
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.output-box {
+  background: var(--card-color);
+  padding: 15px;
+  border-radius: 12px;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 
+    6px 6px 12px var(--shadow-dark), 
+    -6px -6px 12px var(--shadow-light);
+}
+
+.copy-btn {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 
+    inset 4px 4px 8px var(--shadow-dark), 
+    inset -4px -4px 8px var(--shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.copy-btn:hover {
+  box-shadow: 
+    inset -4px -4px 8px var(--shadow-dark), 
+    inset 4px 4px 8px var(--shadow-light);
+}
+
+.dropdown {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--card-color);
+  color: var(--text-color);
+  border: none;
+  font-size: 16px;
+  box-shadow: 
+    6px 6px 12px var(--shadow-dark), 
+    -6px -6px 12px var(--shadow-light), 
+    inset 2px 2px 5px rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+}
+
+.dropdown:hover, .dropdown:focus {
+  box-shadow: 
+    inset 6px 6px 12px var(--shadow-dark), 
+    inset -6px -6px 12px var(--shadow-light);
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 
+    6px 6px 12px var(--shadow-dark), 
+    -6px -6px 12px var(--shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.generate-btn:hover {
+  box-shadow: 
+    inset 6px 6px 12px var(--shadow-dark), 
+    inset -6px -6px 12px var(--shadow-light);
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
