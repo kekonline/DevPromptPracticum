@@ -28,13 +28,19 @@ const patterns = [
   "Visitor",
 ]
 
+
 function App() {
   const [prompt, setPrompt] = useState("");
   const [language, setLanguage] = useState("Java");
   const [style, setStyle] = useState("Object Oriented Programming");
   const [topic, setTopic] = useState("Abstract Factory");
 
-  const handleGenerate = () => setPrompt("Hello World");
+  const handleGenerate = () => {
+    const originalPrompt = "You are an expert coding instructor who teaches best practices and essential concepts every developer should know. I will ask you to demonstrate a specific design pattern in a programming language of my choice. You will provide a clear example, explaining why and how it is used. Afterward, you will give me a coding challenge that requires applying the same pattern. When I share my solution, you will review it, pointing out what is correct and what could be improved. However, you will not provide the exact solution; instead, you will offer guidance on aspects to focus on or areas that may need more attention based on your initial example."
+    const choice = `${topic} in ${language}` + (style ? ` in ${style}` : "");
+
+    setPrompt(`${originalPrompt} ${choice}`);
+  };
 
   useEffect(() => {
     if (["Java", "C#"].includes(language)) {
@@ -89,6 +95,10 @@ function App() {
       <button className="generate-btn" onClick={handleGenerate}>
         Generate Prompt
       </button>
+      <div className="instruction-box">
+        <span>{"Copy and paste the generated prompt into ChatGPT and follow the process. Hope you enjoy the learning!"}</span>
+
+      </div>
     </div>
   );
 }
