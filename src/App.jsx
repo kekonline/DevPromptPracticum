@@ -54,6 +54,9 @@ function App() {
 
   return (
     <div className="container">
+      <div className="logo-box">
+        <img src="src/assets/logo2.png" alt="Logo" />
+      </div>
       <div className="output-box">
         <span>{prompt || "Your prompt will appear here..."}</span>
         {prompt && (

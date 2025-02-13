@@ -43,6 +43,22 @@ body {
     -6px -6px 12px var(--shadow-light);
 }
 
+.logo-box{
+  padding: 15px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  gap: 10px;
+  align-items: center;
+}
+
+.logo-box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .copy-btn {
   background: var(--accent-color);
   color: white;
@@ -108,7 +124,7 @@ body {
 
 @media (max-width: 480px) {
   .container {
-    max-width: 100%;
+    max-width: 90vw;
     padding: 15px;
   }
 }
