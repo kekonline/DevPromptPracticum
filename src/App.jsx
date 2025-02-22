@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import logo from "./assets/logoFinal.png";
+
 
 const languages = ["C", "C#", "C++", "Go", "Java", "JavaScript", "Kotlin", "Python", "Rust", "Swift", "TypeScript"]
 const patterns = [
@@ -55,7 +57,7 @@ function App() {
   return (
     <div className="container">
       <div className="logo-box">
-        <img src="src/assets/logoFinal.png" alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
       <div className="output-box">
         <span>{prompt || "Your prompt will appear here..."}</span>
